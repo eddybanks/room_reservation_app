@@ -1,0 +1,7 @@
+<% @page_header = @room.name.upcase %>
+
+<div class="container">
+  <p>Room Capacity: <%= @room.capacity %></p><br />
+</div>
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

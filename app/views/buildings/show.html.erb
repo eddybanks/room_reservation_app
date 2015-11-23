@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @building.index %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @building.show %>
+</p>
+
+<p>
+  <strong>New:</strong>
+  <%= @building.new %>
+</p>
+
+<p>
+  <strong>Edit:</strong>
+  <%= @building.edit %>
+</p>
+
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<%= link_to 'Back', buildings_path %>

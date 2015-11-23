@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Abel|Amiri|Marmelad);
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "base";
+@import "reset";
+@import "fullcalendar";
+@import "calendar";
+@import "fullcalendar.print";
+@import "parts";
+@import "home";
+@import "rooms";
+@import "reservations";
+
+body{
+  font-family: $main-font;
+  color: $main-color;
+  background-color: $main-bgcolor;
+  height: 100%;
+  widht: 100%;
+}
+
+.site-wrapper{
+  background-color: lighten($main-bgcolor, 15%);
+  min-height: 70em;
+  padding: 5%;
+}

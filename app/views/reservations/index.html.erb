@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reservations</h1>
+
+<table class="table-striped table-hover table-bordered">
+  <thead class="reservation_header">
+    <tr>
+      <th>Name</th>
+      <th>Start datetime</th>
+      <th>End datetime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody class="reservation_list">
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= Room.find_by_id(reservation.room_id).name if reservation.room_id? %></td>
+        <td><%= reservation.start_datetime.to_s(:long_ordinal) %></td>
+        <td><%= reservation.end_datetime.to_s(:long_ordinal) %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reservation', new_reservation_path %>

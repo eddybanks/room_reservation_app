@@ -1,0 +1,11 @@
+<header>
+<% if !@page_header.blank? %>
+  <div class="main_header container">
+    <h1><%= @page_header %></h1>
+    <% if !notice.blank? or !alert.blank? %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+  </div>
+<% end %>
+</header>

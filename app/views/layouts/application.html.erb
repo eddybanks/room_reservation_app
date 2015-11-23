@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= @page_title ? "Room Reservation App | #{@page_title}" : "Room Reservation App" %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+  <%= render 'layouts/navbar' %>
+
+  <div class="container">
+    <%= render 'layouts/header' %>
+    <div class="site-wrapper">
+      <%= yield %>
+    </div>
+  </div>
+
+  <%= render 'layouts/footer' %>
+
+</body>
+
+</html>

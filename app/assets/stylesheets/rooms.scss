@@ -1,0 +1,18 @@
+.room_list{
+  border-top: 2px solid darken($main-bgcolor, 30%);
+  text-align: center;
+  padding: 2%;
+  margin: 2%;
+  background-color: lighten($main-bgcolor, 30%);
+
+  .room-name{
+    font-family: Raleway, 'sans-serif';
+    font-size: 1.5em;
+  }
+
+  .room-buttons{
+    margin-top: 1%;
+    background-color: lighten($main-bgcolor, 15%);
+    border: .5px solid lighten($main-bgcolor, 10%);
+  }
+}
