@@ -16,6 +16,10 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :building %><br>
+    <%= f.select :building_id, Building.all.map{|b| [b.name, b.id]}, include_blank: 'Select a Building' %>
+  </div>
+  <div class="field">
     <%= f.label :capacity %><br>
     <%= f.select :capacity, 1..100 %>
   </div>

@@ -1,3 +1,53 @@
 header{
-  background-color: darken($main-bgcolor, 10%);
+  background-color: lighten($main-bgcolor, 10%);
+}
+
+/*  NAVBAR STYLING   */
+.navbar-default{
+  font-family: 'Raleway';
+  background-color: #c10037;
+  border-color: none;
+  color: #FFFFFF;
+}
+
+//Change Navbar Brand Color Below
+.navbar-default .navbar-brand{
+  font-weight: bolder;
+  color: #FFFFFF;
+}
+
+//Change Navbar Brand Hover Color Below
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+   color: black;
+   background-color: transparent;
+ }
+
+//Change the link colors of Navbar Below
+ .navbar-default .navbar-nav > li > a {
+   color: #FFFFFF;
+ }
+
+//Change the hover color of active below
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FFFFFF;
+  background-color: #500000;
+}
+//Change the hover color of links below
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{
+    color: #FFFFFF;
+    background-color: darken(#c10037, 5);
+}
+// This is where we will change the hover color
+// of links that are using dropdown menus!
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+  color: black;
+  background-color: darken(#c10037, 5);
+
 }

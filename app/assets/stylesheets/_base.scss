@@ -1,7 +1,7 @@
 $main-color: black;
-$main-font: 'Abel', sans-serif;
+$main-font: 'Marmelad', sans-serif;
 $head-font: 'Raleway', sans-serif;
-$main-bgcolor: darken(invert($main-color), 30%);
+$main-bgcolor: lighten(grey, 40%);
 
 @mixin border-radius($radius...){
   -webkit-border-radius: $radius;

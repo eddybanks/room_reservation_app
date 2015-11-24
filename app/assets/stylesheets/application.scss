@@ -15,12 +15,14 @@ body{
   font-family: $main-font;
   color: $main-color;
   background-color: $main-bgcolor;
+  opacity: 10%;
+  font-size: 160%;
   height: 100%;
-  widht: 100%;
+  width: 100%;
 }
 
 .site-wrapper{
-  background-color: lighten($main-bgcolor, 15%);
+  background-color: lighten($main-bgcolor, 10%);
   min-height: 70em;
   padding: 5%;
 }

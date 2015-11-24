@@ -5,10 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Index</th>
-      <th>Show</th>
-      <th>New</th>
-      <th>Edit</th>
+      <th>Name</th>
+      <th>Num of rooms</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +14,8 @@
   <tbody>
     <% @buildings.each do |building| %>
       <tr>
-        <td><%= building.index %></td>
-        <td><%= building.show %></td>
-        <td><%= building.new %></td>
-        <td><%= building.edit %></td>
+        <td><%= building.name %></td>
+        <td><%= building.num_of_rooms %></td>
         <td><%= link_to 'Show', building %></td>
         <td><%= link_to 'Edit', edit_building_path(building) %></td>
         <td><%= link_to 'Destroy', building, method: :delete, data: { confirm: 'Are you sure?' } %></td>

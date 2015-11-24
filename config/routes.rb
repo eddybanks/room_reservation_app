@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :reservations
   resources :buildings
+  resources :reservations
   resources :rooms
   root                        'home#index'
   get       'about'       =>  'home#about'

@@ -1,4 +1,4 @@
 json.array!(@buildings) do |building|
-  json.extract! building, :id, :index, :show, :new, :edit
+  json.extract! building, :id, :name, :num_of_rooms
   json.url building_url(building, format: :json)
 end
