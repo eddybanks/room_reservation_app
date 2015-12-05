@@ -1,11 +1,9 @@
 <% @page_header = "Listing Rooms" %>
 
-  <% @buildings.each do |building| %>
-
-    <a href='#<%= "building#{building.id}" %>', data-toggle="collapse"><h3><%= building.name %></h3></button>
-
+    <% @buildings.each do |building| %>
+    <p><a data-toggle="collapse" href="#building<%= building.id %>"><%= building.name.upcase %></a></p>
     <div id='<%= "building#{building.id}" %>' class="collapse">
-    <% building.rooms.each do |room| %>
+      <% building.rooms.each do |room| %>
       <div class="room_list">
         <%= link_to room.name.upcase, room, class: 'pull-left room-name' %><br /><br />
         <%= "Room Capacity: #{room.capacity}" %><br /><br />

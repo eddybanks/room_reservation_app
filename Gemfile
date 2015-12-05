@@ -15,6 +15,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'validates_overlap'
+gem 'react-rails', '~> 1.5.0'
 
 group :development, :test do
   gem 'byebug'
