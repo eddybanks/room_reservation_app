@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get       'calendar'    =>  'home#calendar'
   get       'faq'         =>  'home#faq'
   get       'contact'     =>  'home#contact'
+  get       'test1'       =>  'home#test1'
+  get       'confirmation' => 'home#confirmation'
 
   devise_for :users
 

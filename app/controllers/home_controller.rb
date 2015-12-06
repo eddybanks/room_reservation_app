@@ -14,5 +14,11 @@ class HomeController < ApplicationController
 
   def contact
   end
-  
+
+  def test1
+  end
+
+  def confirmation
+  end
+
 end

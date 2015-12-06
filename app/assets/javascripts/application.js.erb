@@ -1,0 +1,60 @@
+//= require jquery
+//= require jquery.turbolinks
+//= require bootstrap-sprockets
+//= require jquery_ujs
+//= require turbolinks
+//= require react
+//= require react_ujs
+//= require components
+//= require moment
+//= require fullcalendar
+//= require calendar
+//= require_tree .
+
+
+var onResize = function() {
+  // apply dynamic padding at the top of the body according to the fixed navbar height
+  $("body").css("padding-top", $(".nav").height());
+};
+
+// attach the function to the window resize event
+$(window).resize(onResize);
+
+// call it also when the page is ready after load or reload
+$(function() {
+  onResize();
+  cal_func();
+  readJson();
+});
+
+var cal_func = function(){
+  $("#calendar").fullCalendar({
+    header: {
+      left: 'prev, next today',
+      center: 'title',
+      right: 'month, basicWeek, basicDay'
+    },
+    editable: true,
+    eventLimit: true
+  });
+};
+
+var readJson = function(){$.getJSON( "test1.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    if(val === "<%= User.find(Reservation.first.client_id).email %>" && key === "<%= Reservation.first.id %>"){
+      items.push( "<p id='" + key + "'>" + val + "</p><p>The door has been Unlocked</p><p>You can now open the Door!</p>" );
+      console.log("Unlock Door!")
+    }
+    else{
+      items.push( "<p style='color:red;'>Your reservation data is wrong. Please try again!</p>" );
+      console.log("Mismatch: Keep Door Locked!")
+    }
+  });
+
+  $( "<div/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "#jsonData" );
+});
+};
